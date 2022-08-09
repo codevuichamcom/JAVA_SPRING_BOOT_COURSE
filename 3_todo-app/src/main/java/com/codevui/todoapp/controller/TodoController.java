@@ -1,4 +1,4 @@
-package com.codevui.todoapp;
+package com.codevui.todoapp.controller;
 
 import java.util.List;
 
@@ -10,22 +10,19 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import com.codevui.todoapp.entity.Todo;
+import com.codevui.todoapp.service.TodoService;
+
 @Controller
-public class MainController {
+public class TodoController {
     @Autowired
     TodoService todoService;
-
-    @GetMapping("/hello")
-    public String hello() {
-        // xử lý logic gì đáy.......
-        return "hello";
-    }
 
     @GetMapping("/list-todo")
     public String listTodo(Model model) {
         List<Todo> listTodos = todoService.getAllTodo();
         model.addAttribute("listTodos", listTodos);
-        return "listTodo";
+        return "todo/listTodo";
     }
 
     @PostMapping(value = "/add-todo")

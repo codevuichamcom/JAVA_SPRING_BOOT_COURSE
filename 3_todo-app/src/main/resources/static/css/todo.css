@@ -1,0 +1,27 @@
+:root {
+  --MARGIN-PADDING-DEFAULT: 15px;
+}
+
+.list-todo {
+  margin: 0 auto;
+  width: 600px;
+  text-align: center;
+  border: 1px solid #ddd;
+  padding: var(--MARGIN-PADDING-DEFAULT);
+  font-size: 18px;
+  font-family: sans-serif;
+}
+
+.list-todo__title {
+  color: green;
+  font-size: 40px;
+}
+.list-todo__header {
+  margin-top: var(--MARGIN-PADDING-DEFAULT);
+}
+.list-todo__tasks {
+  margin-top: var(--MARGIN-PADDING-DEFAULT);
+}
+.list-todo__tasks span + span {
+  margin-left: var(--MARGIN-PADDING-DEFAULT);
+}
