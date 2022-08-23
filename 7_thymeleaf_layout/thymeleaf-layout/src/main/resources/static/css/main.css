@@ -1,0 +1,38 @@
+:root {
+  --PADDING_DEFAULT: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 35px;
+}
+
+.header {
+  background-color: lightblue;
+  text-align: center;
+  padding: var(--PADDING_DEFAULT);
+}
+.main {
+  display: flex;
+}
+
+.main__nav {
+  flex-basis: 30%;
+  background-color: lightcoral;
+  text-align: center;
+  padding: var(--PADDING_DEFAULT);
+}
+.main__content {
+  background-color: lightgreen;
+  flex-grow: 1;
+  padding: var(--PADDING_DEFAULT);
+  min-height: 625px;
+}
+
+.footer {
+  background-color: lightgrey;
+  text-align: center;
+  padding: var(--PADDING_DEFAULT);
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html
+  xmlns:th="http://www.thymeleaf.org"
+  th:replace="layouts/main-layout :: main-fragment(
+    ~{::title},
+    ~{},
+    ~{::#home-header},
+    ~{::#home-main-content},
+    ~{::#home-footer})"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Title of Home page</title>
+  </head>
+  <body>
+    <div id="home-header">Header of Home page</div>
+    <div id="home-main-content">Contents of Home page</div>
+    <div
+      id="home-footer"
+      th:insert="fragments/app-fragments::footer('codevuichamcom')"
+    ></div>
+  </body>
+</html>
